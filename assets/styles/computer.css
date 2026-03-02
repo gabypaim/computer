@@ -57,7 +57,7 @@ body {
     background-size: cover;
 
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: 1fr 9fr 1fr;
     grid-auto-flow: column;
     
     padding: 4%;
@@ -160,7 +160,7 @@ body {
 }
 
 .dia {
-    background-color: rgb(170, 170, 170);
+    background-color: #64a1fc;
     align-content: center;
     align-self: center;
     height: 100%;
@@ -174,5 +174,45 @@ body {
 
 .hora {
     justify-self: flex-end;
+}
+
+.janelas {
+   position: absolute;
+   z-index: 3;
+    top: 20%;;
+    left: 10%;
+    width: 65%;
+    height: 65%;
+    z-index: 3;
+    
+}
+.windowpc {
+    display: none;
+    background-color: #dbe7ff;
+    width: 100%;
+    height: 100%;
+}
+.windowpc nav {
+    display: flex;
+    gap: 5px;
+    background-color: #dbe7ff;
+}
+
+nav p {
+    color: black;
+    background-color: #c5d6fa;
+    padding: 2px;
+}
+
+nav p:hover {
+    filter: brightness(1.2);
+}
+
+.topo {
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    background: linear-gradient(to top, rgb(27, 80, 224), #64a1fc);
+    cursor: move;
 }
 
