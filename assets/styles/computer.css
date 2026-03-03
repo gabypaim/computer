@@ -8,6 +8,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: DigitalDisco;
+    list-style-type: none;
 }
 
 a {
@@ -52,8 +53,8 @@ body {
     left: 16.3%;
     width: 67.4%;
     height: 52%;
-    background: url(../computerassets/misa.jpg) center;
-    background-size: cover;
+    background: url(../computerassets/misa.jpg) center no-repeat;
+    background-size: 164%;
 
     display: grid;
     grid-template-columns: 1fr 9fr 1fr;
@@ -68,53 +69,57 @@ body {
     pointer-events: none;
 }
 
+#glitch {
+    position: absolute;
+    top: 8.7%;
+    left: 16.3%;
+    width: 67.4%;
+    height: 52%;
+    pointer-events: none;
+    filter: opacity(0.07);
+    z-index: 3;
+}
 .icons {
     grid-column: 1;
-    width: 80%;
+    width: 100%;
 }
 
 .icon {
     text-align: center;
     justify-items: center;
-    margin-bottom: 10px;
     image-rendering: pixelated;
+    margin-bottom: 8px;
 }
 
 .icons p {
     margin-top: 1px;
-    font-size: clamp(10px, 0.8vw, 10px);
+    font-size: clamp(8px, 0.5vw, 10px);
     color: rgb(255, 255, 255);
     text-decoration:  black;
-    background-color: blue;
 }
 
 .icon img {
     aspect-ratio: 1/1;
-    width: min(80%, 100%);
+    width: min(75%, 46px);
+    height: min(75%, 31px);
     
 }
-.icon:hover img {
+.icon:hover  {
     filter: brightness(1.2);
     background-color: rgba(208, 215, 255, 0.322);
-    border: rgba(163, 194, 255, 0.849) solid 1px;
 }
 
 .col2 {
     grid-column: -2/-1;
-    width: 80%;
+    width: 100%;
+    
 }
 
 .col2 p {
     margin-top: 1px;
-    font-size: clamp(10px, 0.8vw, 10px);
+    font-size: clamp(8px, 0.5vw, 10px);
     color: rgb(255, 255, 255);
     text-decoration:  black;
-    background-color: blue;
-}
-
-.col2 img {
-    aspect-ratio: 1/1;
-    width: min(80%, 100%);
 }
 
 .barra {
@@ -142,14 +147,11 @@ body {
     justify-items: center;
     justify-content: flex-start;
     background-color: #3e92ff;
-    border-radius: 6px;
+    border-radius: 6px 6px 1px 1px;
     padding: 5px; 
     cursor: default;   
 }
 
-#barmypc:hover {
-    background-color: #2344ff;
-}
 
 #winxp {
     display: flex;   
@@ -188,19 +190,16 @@ body {
 
 .dia {
     background-color: #64a1fc;
-    align-content: center;
-    align-self: center;
     height: 100%;
-    width: 18%;
-    align-self: center;
-    padding: 5px;
-    font-size: clamp(7px, 0.6vw, 12px);
+    width: 22%;
+    padding: 3px;
     border-radius: 5px;
-    font-family: monospace;
 }
 
-.hora {
-    justify-self: flex-end;
+.monospace p{
+    font-size: clamp(6px, 0.6vw, 12px);
+    font-family: monospace;
+    margin-left: 4px;
 }
 
 .janelas {
@@ -219,11 +218,12 @@ body {
     width: 100%;
     height: 100%;
     font-size: 0.8em;
+    overflow: hidden;
 }
 .windowpc nav {
     display: flex;
     gap: 5px;
-    background-color: #ffffd5;
+    background-color: #c7cada;
 }
 
 nav p {
@@ -242,7 +242,7 @@ nav p:hover {
     color: black;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to top, rgb(27, 80, 224), #64a1fc);
+    background: linear-gradient(to top, rgb(27, 80, 224), #51acf7);
     cursor: move;
     color: white;
     font-size: 0.7vw;
@@ -261,9 +261,10 @@ nav p:hover {
     height: 45%;
     padding: 1px;
     aspect-ratio: 1/1;
-    background-color: white;
+    background-color: rgb(240, 158, 158);
     border-radius:  1px;
-    border: 1px solid rgb(116, 116, 116);
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
 }
 
 .minimizar {
@@ -271,9 +272,10 @@ nav p:hover {
     height: 45%;
     padding: 1px;
     aspect-ratio: 1/1;
-    background-color: white;
+    background-color: transparent;
     border-radius:  1px;
-    border: 1px solid rgb(116, 116, 116);
+    border: 1px solid white;
+    color: white;
 }
 
 #setup {
@@ -285,7 +287,6 @@ nav p:hover {
 #setup ul {
     font-size: 0.65vw;
     margin: 7px 10px;
-    list-style-type: none;
 }
 
 li span {
@@ -294,10 +295,37 @@ li span {
 }
 
 #about {
-    display: none;
-    margin: 10px;
-    background-color: rgb(253, 253, 187);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 89%;
     font-size: 0.7vw;
     color: black;
 }
+
+.azul {
+    grid-column: 1;
+    background-color: #8197f8;
+    padding: 10px;
+    width: 90%;
+    height: 100%;
+    color: white;
+}
+.azul img:hover {
+    transform: scale(1.1);
+}
+.azul img {
+    margin-bottom: 4px;
+    aspect-ratio: 1/1;
+    width: 45%;
+    height: 25%;
+    border-radius: 4px;
+    border: 3px solid #acccf5;
+}
+
+#branco {
+    display: none;
+    margin: 10px;
+    grid-column: 2;
+}
+
 

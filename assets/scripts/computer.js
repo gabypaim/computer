@@ -11,7 +11,7 @@ function atualizarRelogio() {
     // Data (dd/mm/yy)
     let dia = agora.getDate().toString().padStart(2, '0');
     let mes = (agora.getMonth() + 1).toString().padStart(2, '0');
-    let ano = agora.getFullYear().toString().slice(-2);
+    let ano = agora.getFullYear().toString();
 
     document.getElementById("dia").textContent = `${dia}/${mes}/${ano}`;
 }
@@ -64,6 +64,8 @@ document.addEventListener("mouseup", () => {
     isDragging = false;
 });
 
+let clicado = false;
+
 //abrir my computer
 function pcwindow() {
     const janelas = document.querySelectorAll(".windowpc"); 
@@ -81,7 +83,10 @@ function windowclose() {
     janelas.forEach(janela => {
         janela.style.display = "none";
         barmypc.style.display = "none";
-        barmypc.style.backgroundColor = "#3e92ff"  
+        barmypc.style.backgroundColor = "#3e92ff"
+        branco.style.display = "none";
+        clicado = false;
+
     });
 }
 
@@ -109,11 +114,14 @@ function clicksetup() {
 function clickabout() {
     const abouts = document.querySelectorAll("#about"); 
     abouts.forEach(about => {
-        about.style.display = "block"; 
+        about.style.display = "grid"; 
         setup.style.display = "none"; 
         about.style.zIndex = 10;       
     });
 }
+
+
+
 
 //minimizar pela barra
 let aberta = true; 
@@ -133,5 +141,22 @@ function toggleBarra() {
         janelas.forEach(j => j.style.display = "block");
         barmypc.style.backgroundColor = "#2344ff"
         aberta = true;
+    }
+}
+
+function clickdados() {
+    const dados = document.querySelectorAll("#branco");
+
+    if (clicado === false) {
+        dados.forEach(branco => {
+            branco.style.display = "block";
+        });
+        clicado = true;
+
+    } else {
+        dados.forEach(branco => {
+            branco.style.display = "none";
+        });
+        clicado = false;
     }
 }

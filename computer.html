@@ -39,50 +39,65 @@
             <div class="col2">
                 <div class="icon" onclick="pcwindow()">
                     <img src="assets/computerassets/mypc.png" alt="meucomputadoricon" id="mypc">
-                    <p>my computer</p>
+                    <p>my pc</p>
+                </div>
+                <div class="icon" onclick="">
+                    <img src="assets/computerassets/folder.png" alt="foldericon" id="folder">
+                    <p>arts</p>
                 </div>
             </div>
-            <div class="janelas">
-                <div class="windowpc" id="win-mypc">
-                    <div class="topo">
-                        <span>my computer</span>
-                        <div class="buttons">
-                            <button class="fechar" onclick="windowmin()">-</button>
-                            <button class="fechar" onclick="windowclose()">x</button>
+                <div class="janelas">
+                    <div class="windowpc" id="win-mypc">
+                        <div class="topo">
+                            <span>my computer</span>
+                            <div class="buttons">
+                                <button class="minimizar" onclick="windowmin()">-</button>
+                                <button class="fechar" onclick="windowclose()">x</button>
+                            </div>
+                        </div>
+                        <nav>
+                            <p onclick="clickabout()">about</p>
+                            <p onclick="clicksetup()">setup</p>
+                        </nav>
+                        <div id="setup">
+                            <ul>
+                                <li>Geforce GTX <span>1060</span> 6GB</li>
+                                <li>RAM <span>16GB</span></li>
+                                <li>Maxsun <span>B550M</span> Terminator</li>
+                                <li>AMD Ryzen <span>5 5500</span></li>
+                                <li>HD <span>1TB</span></li>
+                                <li>SSD Kingston <span>240GB</span></li>
+                            </ul>
+                            <ul>
+                                <li>Mouse Kysona <span>M600</span></li>
+                                <li>Monitor LG UltraGear <span>24”</span> IPS <span>180Hz</span></li>
+                                <li>Headset Logitech <span>G435</span></li>
+                                <li>Teclado Redragon Dark Avenger</li>
+                                <br>
+                                <li>Mesa digitalizadora: <br> Wacom Bamboo <span>CTL-471</span> / XPPEN Deco Mini <span>V2</span></li>
+                            </ul>
+                        </div>
+                        <div id="about">
+                            <div class="azul">
+                                <img src="assets/computerassets/xpuser.png" alt="" onclick="clickdados()">
+                                <p>Gaby Paim</p>
+                            </div>
+                            
+                            <div id="branco">
+                                <ul>
+                                    <li>20 years old</li> <br>
+                                    <li>skills:</li>
+                                    <li>Javascript and Electron.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <nav>
-                        <p onclick="clickabout()">about</p>
-                        <p onclick="clicksetup()">setup</p>
-                    </nav>
-                    <div id="setup">
-                      <ul>
-                        <li>Geforce GTX <span>1060</span> 6GB</li>
-                        <li>RAM <span>16GB</span></li>
-                        <li>Maxsun <span>B550M</span> Terminator</li>
-                        <li>AMD Ryzen <span>5 5500</span></li>
-                        <li>HD 1TB</li>
-                        <li>SSD Kingston <span>240GB</span></li>
-                    </ul>
-                    <ul>
-                        <li>Mouse Kysona <span>M600</span></li>
-                        <li>Monitor LG UltraGear <span>24”</span> IPS <span>180Hz</span></li>
-                        <li>Headset Logitech <span>G435</span></li>
-                        <li>Teclado Redragon Dark Avenger</li>
-                        <br>
-                        <li>Mesa digitalizadora: <br> Wacom Bamboo <span>CTL-471</span> / XPPEN Deco Mini <span>V2</span></li>
-                    </ul>
-                </div>
-                <div id="about">
-                    <p>Gaby Paim</p>
-                    <p>20 years old</p> <br>
-                    <p>
-                        skills: <br>
-                        Javascript and Electron.js;
-                    </p>
-                </div>
-        </div>
+                    <div id="folderart">
+
+                    </div>
+                </div>   
         </main>
+        
         <div class="barra">
             <div id="winxp">
                 <div id=win>
@@ -93,12 +108,14 @@
             </div>
            
             <div class="dia">
-                <p id="hora">dd/mm/yy</p>
-                <p id="dia">dd/mm/yy</p>
+                <div class="monospace">
+                    <p id="hora">dd/mm/yy</p>
+                    <p id="dia">dd/mm/yy</p>
+                </div>
             </div>
         </div>
 
-
+        <img src="assets/computerassets/glitch.gif" alt="" id="glitch">
         <img src="assets/computerassets/computerwhite.png" alt="" class="pc-frame">
     </div>
    
