@@ -8,7 +8,6 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: DigitalDisco;
-    color: white;
 }
 
 a {
@@ -96,7 +95,8 @@ body {
 }
 .icon:hover img {
     filter: brightness(1.2);
-    background-color: rgba(218, 191, 233, 0.322);
+    background-color: rgba(208, 215, 255, 0.322);
+    border: rgba(163, 194, 255, 0.849) solid 1px;
 }
 
 .col2 {
@@ -131,31 +131,58 @@ body {
     flex-shrink: 0;
     flex-grow: 0;
     justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+
+#barmypc {
+    font-size: 0.7vw;
+    display: none;
+    justify-items: center;
+    justify-content: flex-start;
+    background-color: #3e92ff;
+    border-radius: 6px;
+    padding: 5px; 
+    cursor: default;   
+}
+
+#barmypc:hover {
+    background-color: #2344ff;
 }
 
 #winxp {
-    
+    display: flex;   
+    justify-content: flex-start;
+    align-items: center;
     align-content: center;
     text-align: center;
-    display: flex;
-    align-items: center;
-    image-rendering: pixelated;
-    background-color: rgb(117, 172, 117);
-    border-radius: 6px;
-    width: 25%;
-    align-content: center;
+    gap: 10px;
 
+    width: 82%;
+    height: 100%;
+    image-rendering: pixelated;
+    
 }
 
-#winxp img {
+#win {
+    display: flex;
+    align-items: center;
+    background-color: rgb(117, 172, 117);
+    border-radius: 6px;
+    width: 28%;
+    height: 100%;
+}
+
+#win img {
     margin-left: 18px;
     width: 27%;
     image-rendering: pixelated;
-    height: 73%;
+    height: 73
 }
 
-#winxp p {
-    font-size: clamp(15px, 1vw, 20px);
+#win p {
+    font-size: 0.9vw;
     margin-left: 5px;
 }
 
@@ -164,12 +191,12 @@ body {
     align-content: center;
     align-self: center;
     height: 100%;
-    width: 20%;
+    width: 18%;
     align-self: center;
-    font-size: 0.9em;
     padding: 5px;
-    font-size: clamp(8px, 0.7vw, 12px);
+    font-size: clamp(7px, 0.6vw, 12px);
     border-radius: 5px;
+    font-family: monospace;
 }
 
 .hora {
@@ -191,16 +218,18 @@ body {
     background-color: #dbe7ff;
     width: 100%;
     height: 100%;
+    font-size: 0.8em;
 }
 .windowpc nav {
     display: flex;
     gap: 5px;
-    background-color: #dbe7ff;
+    background-color: #ffffd5;
 }
 
 nav p {
     color: black;
-    background-color: #c5d6fa;
+    background-color: #dbe7ff;
+    border-radius: 3px;
     padding: 2px;
 }
 
@@ -212,7 +241,63 @@ nav p:hover {
     display: flex;
     color: black;
     justify-content: space-between;
+    align-items: center;
     background: linear-gradient(to top, rgb(27, 80, 224), #64a1fc);
     cursor: move;
+    color: white;
+    font-size: 0.7vw;
+}
+.topo span {
+   margin-left: 5px;
+}
+.buttons {
+    display: flex;
+    width: 10%;
+    margin: 2px;
+    gap: 2px;
+}
+.fechar {
+    width: 45%;
+    height: 45%;
+    padding: 1px;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius:  1px;
+    border: 1px solid rgb(116, 116, 116);
+}
+
+.minimizar {
+    width: 48%;
+    height: 45%;
+    padding: 1px;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius:  1px;
+    border: 1px solid rgb(116, 116, 116);
+}
+
+#setup {
+    display: none;
+    font-size: 0.7em;
+    color: black;
+}
+
+#setup ul {
+    font-size: 0.65vw;
+    margin: 7px 10px;
+    list-style-type: none;
+}
+
+li span {
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+#about {
+    display: none;
+    margin: 10px;
+    background-color: rgb(253, 253, 187);
+    font-size: 0.7vw;
+    color: black;
 }
 

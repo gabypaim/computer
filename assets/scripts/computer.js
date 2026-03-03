@@ -64,18 +64,74 @@ document.addEventListener("mouseup", () => {
     isDragging = false;
 });
 
-
+//abrir my computer
 function pcwindow() {
     const janelas = document.querySelectorAll(".windowpc"); 
     janelas.forEach(janela => {
-        janela.style.display = "block"; 
+        janela.style.display = "block";
+        barmypc.style.display = "block";
+        barmypc.style.backgroundColor = "#2344ff" 
         janela.style.zIndex = 10;       // traz para frente se tiver mais janelas
     });
 }
 
+//fechar my computer
 function windowclose() {
     const janelas = document.querySelectorAll(".windowpc");
     janelas.forEach(janela => {
-        janela.style.display = "none"; 
+        janela.style.display = "none";
+        barmypc.style.display = "none";
+        barmypc.style.backgroundColor = "#3e92ff"  
     });
+}
+
+//minimzar my computer
+function windowmin() {
+    const janelas = document.querySelectorAll(".windowpc");
+    janelas.forEach(janela => {
+        janela.style.display = "none";
+        barmypc.style.display = "block";
+        barmypc.style.backgroundColor = "#3e92ff"  
+    });
+}
+
+//botões my computer
+function clicksetup() {
+    const setups = document.querySelectorAll("#setup"); 
+    
+    setups.forEach(setup => {
+        setup.style.display = "block"; 
+        
+        about.style.display = "none"; 
+        setup.style.zIndex = 10;       
+    });
+}
+function clickabout() {
+    const abouts = document.querySelectorAll("#about"); 
+    abouts.forEach(about => {
+        about.style.display = "block"; 
+        setup.style.display = "none"; 
+        about.style.zIndex = 10;       
+    });
+}
+
+//minimizar pela barra
+let aberta = true; 
+
+function toggleBarra() {
+    const janelas = document.querySelectorAll(".windowpc");
+    const barmypc = document.getElementById("barmypc");
+   
+
+    if (aberta) {
+        barmypc.style.cursor = "pointer"; 
+        janelas.forEach(j => j.style.display = "none");
+        barmypc.style.backgroundColor = "#3e92ff"
+        aberta = false;
+    } else {
+        barmypc.style.cursor = "default"; 
+        janelas.forEach(j => j.style.display = "block");
+        barmypc.style.backgroundColor = "#2344ff"
+        aberta = true;
+    }
 }
