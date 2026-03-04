@@ -141,7 +141,7 @@ body {
 }
 
 
-#barmypc {
+.bar {
     font-size: 0.7vw;
     display: none;
     justify-items: center;
@@ -327,5 +327,3 @@ li span {
     margin: 10px;
     grid-column: 2;
 }
-
-
