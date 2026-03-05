@@ -23,79 +23,122 @@
                         <p>Spotify</p>
                     </div>
                 </a>
-                 <a href="https://github.com/gabypaim" target="_blank" rel="external">
+                <a href="https://github.com/gabypaim" target="_blank" rel="external">
                     <div class="icon">
                         <img src="assets/computerassets/github.ong.png" alt="githubicon">
                         <p>Github</p>
                     </div>
                 </a>
-                  <a href="https://x.com/Gabypaiim" target="_blank" rel="external">
+                <a href="https://x.com/Gabypaiim" target="_blank" rel="external">
                     <div class="icon">
                         <img src="assets/computerassets/twitter.png" alt="twittericon">
                         <p>Twitter</p>
                     </div>
                 </a>
+                <a href="https://www.behance.net/gaby" target="_blank" rel="external">
+                    <div class="icon">
+                        <img src="assets/computerassets/behance.png" alt="behanceicon">
+                        <p>Behance</p>
+                    </div>
+                </a>
             </div>
             <div class="col2">
-                <div class="icon" onclick="pcwindow()">
-                    <img src="assets/computerassets/mypc.png" alt="meucomputadoricon" id="mypc">
+                <div class="icon" data-id="mycomputer" data-barid="barmypc" data-name="Meu computador" onclick="abrir(this)">
+                    <img src="assets/computerassets/mypc.png" alt="meucomputadoricon">
                     <p>my pc</p>
                 </div>
-                <div class="icon" onclick="">
-                    <img src="assets/computerassets/folder.png" alt="foldericon" id="folder">
+                <div class="icon" data-id="folder" data-barid="barart" data-name="Folder" onclick="abrir(this)">
+                    <img src="assets/computerassets/folder.png" alt="foldericon" id="fold">
                     <p>arts</p>
                 </div>
             </div>
-                <div class="janelas">
-                    <div class="windowpc" id="win-mypc">
-                        <div class="topo">
-                            <span>my computer</span>
-                            <div class="buttons">
-                                <button class="minimizar" onclick="windowmin()">-</button>
-                                <button class="fechar" onclick="windowclose()">x</button>
-                            </div>
-                        </div>
-                        <nav>
-                            <p onclick="clickabout()">about</p>
-                            <p onclick="clicksetup()">setup</p>
-                        </nav>
-                        <div id="setup">
-                            <ul>
-                                <li>Geforce GTX <span>1060</span> 6GB</li>
-                                <li>RAM <span>16GB</span></li>
-                                <li>Maxsun <span>B550M</span> Terminator</li>
-                                <li>AMD Ryzen <span>5 5500</span></li>
-                                <li>HD <span>1TB</span></li>
-                                <li>SSD Kingston <span>240GB</span></li>
-                            </ul>
-                            <ul>
-                                <li>Mouse Kysona <span>M600</span></li>
-                                <li>Monitor LG UltraGear <span>24”</span> IPS <span>180Hz</span></li>
-                                <li>Headset Logitech <span>G435</span></li>
-                                <li>Teclado Redragon Dark Avenger</li>
-                                <br>
-                                <li>Mesa digitalizadora: <br> Wacom Bamboo <span>CTL-471</span> / XPPEN Deco Mini <span>V2</span></li>
-                            </ul>
-                        </div>
-                        <div id="about">
-                            <div class="azul">
-                                <img src="assets/computerassets/xpuser.png" alt="" onclick="clickdados()">
-                                <p>Gaby Paim</p>
-                            </div>
-                            
-                            <div id="branco">
-                                <ul>
-                                    <li>20 years old</li> <br>
-                                    <li>skills:</li>
-                                    <li>Javascript and Electron.</li>
-                                </ul>
-                            </div>
+            
+                <div class="janelas" id="mycomputer">
+                    <div class="topo">
+                        <span>my computer</span>
+                        <div class="buttons">
+                            <button class="minimizar" onclick="minimizar(this)">-</button>
+                            <button class="fechar" onclick="fechar(this)">x</button>
                         </div>
                     </div>
-                    <div id="folderart">
-
+                    <nav>
+                        <p onclick="clickabout()">about</p>
+                        <p onclick="clicksetup()">setup</p>
+                    </nav>
+                    <div id="setup">
+                        <ul>
+                            <li>Geforce GTX <span>1060</span> 6GB</li>
+                            <li>RAM <span>16GB</span></li>
+                            <li>Maxsun <span>B550M</span> Terminator</li>
+                            <li>AMD Ryzen <span>5 5500</span></li>
+                            <li>HD <span>1TB</span></li>
+                            <li>SSD Kingston <span>240GB</span></li>
+                        </ul>
+                        <ul>
+                            <li>Mouse Kysona <span>M600</span></li>
+                            <li>Monitor LG UltraGear <span>24”</span> IPS <span>180Hz</span></li>
+                            <li>Headset Logitech <span>G435</span></li>
+                            <li>Teclado Redragon Dark Avenger</li>
+                            <br>
+                            <li>Mesa digitalizadora: <br> Wacom Bamboo <span>CTL-471</span> / XPPEN Deco Mini <span>V2</span></li>
+                        </ul>
                     </div>
-                </div>   
+                    <div id="about">
+                        <div class="azul">
+                            <img src="assets/computerassets/xpuser.png" alt="" onclick="clickdados()">
+                            <p>Gaby Paim</p>
+                        </div>
+                        
+                        <div id="branco">
+                            <ul>
+                                <li>20 years old</li> <br>
+                                <li>skills:</li>
+                                <li>Javascript and Electron.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="janelas" id="folder">
+                    <div class="topo">
+                        <span>Folder</span>
+                        <div class="buttons">
+                            <button class="minimizar" onclick="minimizar(this)">-</button>
+                            <button class="fechar" onclick="fechar(this)">x</button>
+                        </div>
+                    </div>
+                    <nav>
+                        <p onclick="clickart()">art</p>
+                        <p onclick="clickpixelart()">pixelart</p>
+                    </nav>
+                    <div id="art" >
+                        <img src="assets/computerassets/evelynn.png" alt="evelynn">
+                        <p>evelynn.png</p>
+                        <img src="assets/computerassets/robin.png" alt="robin">
+                        <p>robin.png</p>
+                        <img src="assets/computerassets/art1.png" alt="art1">
+                        <p>ilustration.png</p>
+                        <img src="assets/computerassets/sketch.png" alt="sketch">
+                        <p>sketch.png</p>
+                        <img src="assets/computerassets/draco2.png" alt="draco">
+                        <p>draco.png</p>
+                        <img src="assets/computerassets/design.png" alt="designcharacters">
+                        <p>designcharacters.png</p>
+                        
+                    </div>
+                    <div id="pixelart">
+                        <img src="assets/computerassets/first animation.gif" alt="cupheadpixelart">
+                        <p>cupheadanimation.gif</p>
+                        <img src="assets/computerassets/character angle.gif" alt="personagenspixelart1">
+                        <p>characterangle.gif</p> 
+                        <img src="assets/computerassets/MISA.png" alt="misapixelart">
+                        <p>misaroom.png</p>
+                        <img src="assets/computerassets/characters1.png" alt="personagenspixelart2">
+                        <p>sprite1.png</p>
+                        <img src="assets/computerassets/characters2.png" alt="personagenspixelart3">
+                        <p>sprite2.png</p>
+                    </div>
+                </div>
+                  
         </main>
         
         <div class="barra">
@@ -104,8 +147,7 @@
                     <img src="assets/computerassets/xp.png" alt="">
                     <p>start;</p>
                 </div>
-                <div class="bar" id="barmypc" onclick="toggleBarra()"><p>my computer</p></div>
-                <div class="bar" id="barart" onclick="toggleBarraArt()"><p>art</p></div>
+
             </div>
            
             <div class="dia">
@@ -120,6 +162,7 @@
         <img src="assets/computerassets/computerwhite.png" alt="" class="pc-frame">
     </div>
    
-    <script src="assets/scripts/computer.js"></script>
+    <script src="assets/scripts/computer2.js"></script>
+    <script src="assets/scripts/delimitarjanelas.js"></script>
 </body>
 </html>

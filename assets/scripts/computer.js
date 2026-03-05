@@ -103,7 +103,6 @@ function windowmin() {
 //botões my computer
 function clicksetup() {
     const setups = document.querySelectorAll("#setup"); 
-    
     setups.forEach(setup => {
         setup.style.display = "block"; 
         
@@ -119,9 +118,6 @@ function clickabout() {
         about.style.zIndex = 10;       
     });
 }
-
-
-
 
 //minimizar pela barra
 let aberta = true; 
@@ -160,3 +156,4 @@ function clickdados() {
         clicado = false;
     }
 }
+

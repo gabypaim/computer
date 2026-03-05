@@ -143,7 +143,6 @@ body {
 
 .bar {
     font-size: 0.7vw;
-    display: none;
     justify-items: center;
     justify-content: flex-start;
     background-color: #3e92ff;
@@ -152,6 +151,9 @@ body {
     cursor: default;   
 }
 
+.bar:hover {
+    cursor: pointer;
+}
 
 #winxp {
     display: flex;   
@@ -203,32 +205,36 @@ body {
 }
 
 .janelas {
-   position: absolute;
-   z-index: 3;
+    position: absolute;
+    z-index: 3;
     top: 20%;;
     left: 10%;
     width: 65%;
     height: 65%;
-    z-index: 3;
-    
+    overflow: auto;
+    font-size: clamp(6px, 0.8vw, 15px);
+    background-color: #e8f8ff;
 }
-.windowpc {
+
+#mycomputer {
     display: none;
-    background-color: #dbe7ff;
-    width: 100%;
-    height: 100%;
-    font-size: 0.8em;
     overflow: hidden;
 }
-.windowpc nav {
+
+#folder {
+    display: none;
+}
+
+.janelas nav {
     display: flex;
     gap: 5px;
     background-color: #c7cada;
+    font-size: clamp(6px, 0.7vw, 15px);
 }
 
 nav p {
     color: black;
-    background-color: #dbe7ff;
+    background-color: #e8f8ff;
     border-radius: 3px;
     padding: 2px;
 }
@@ -250,12 +256,14 @@ nav p:hover {
 .topo span {
    margin-left: 5px;
 }
+
 .buttons {
     display: flex;
-    width: 10%;
+    width: 12%;
     margin: 2px;
     gap: 2px;
 }
+
 .fechar {
     width: 45%;
     height: 45%;
@@ -280,13 +288,9 @@ nav p:hover {
 
 #setup {
     display: none;
-    font-size: 0.7em;
     color: black;
-}
-
-#setup ul {
-    font-size: 0.65vw;
     margin: 7px 10px;
+    font-size: 0.65vw;
 }
 
 li span {
@@ -297,18 +301,20 @@ li span {
 #about {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 89%;
-    font-size: 0.7vw;
+    height: 88%;
     color: black;
 }
 
 .azul {
     grid-column: 1;
     background-color: #8197f8;
-    padding: 10px;
-    width: 90%;
-    height: 100%;
     color: white;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-items: center;
+    padding: 10%;
 }
 .azul img:hover {
     transform: scale(1.1);
@@ -316,8 +322,8 @@ li span {
 .azul img {
     margin-bottom: 4px;
     aspect-ratio: 1/1;
-    width: 45%;
-    height: 25%;
+    width: 50%;
+    height: 29%;
     border-radius: 4px;
     border: 3px solid #acccf5;
 }
@@ -326,4 +332,60 @@ li span {
     display: none;
     margin: 10px;
     grid-column: 2;
+}
+
+#folder .topo {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+#pixelart {
+    /*display: flex;*/
+    display: none;
+    flex-flow: column wrap;
+    justify-items: center;
+    align-content: center;
+    margin: 5%;
+    overflow: auto;
+    width: 90%;
+}
+
+#pixelart img {
+    padding: 2%;
+    image-rendering: pixelated;
+    width: 100%;
+}
+
+#art {
+    display: flex;
+    flex-flow: column wrap;
+    justify-items: center;
+    align-content: center;
+    margin: 5%;
+    overflow: auto;
+    width: 90%;
+}
+
+#art img {
+    padding: 2%;
+    image-rendering: pixelated;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+  max-width: 12px;
+  max-height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #7489ff;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: blue;
 }
