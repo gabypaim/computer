@@ -20,7 +20,7 @@ function abrir(elemento) {
         let zindex = 1
         
         janela.addEventListener('click', function () {
-                zindex = zindex + 1;
+                zindex = zindex * 2;
                 janela.style.zIndex = zindex;
            
             // como faço pra deixar azul só a barra com maior index >:

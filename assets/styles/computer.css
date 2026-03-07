@@ -341,8 +341,7 @@ li span {
 }
 
 #pixelart {
-    /*display: flex;*/
-    display: none;
+    display: flex;
     flex-flow: column wrap;
     justify-items: center;
     align-content: center;
@@ -358,7 +357,7 @@ li span {
 }
 
 #art {
-    display: flex;
+    display: none;
     flex-flow: column wrap;
     justify-items: center;
     align-content: center;
