@@ -53,8 +53,9 @@ body {
     left: 16.3%;
     width: 67.4%;
     height: 52%;
-    background: url(../computerassets/misa.jpg) center no-repeat;
-    background-size: 164%;
+    background: url(../computerassets/kise.PNG) top no-repeat;
+    background-size: 115%;
+    
 
     display: grid;
     grid-template-columns: 1fr 9fr 1fr;
