@@ -25,7 +25,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(0, 0, 0);
+    background: url(../computerassets/bitmap.jpg);
 }
 
 .pc-container {
